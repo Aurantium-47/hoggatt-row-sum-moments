@@ -1,0 +1,43 @@
+{
+  "record_kind": "Actual local replay of the packaged stdout-only certificate entry",
+  "observed_at_utc": "2026-10-13T19:56:52.767213+00:00",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "command": "python -I -B code/verify_certificate.py",
+  "cwd_independent": true,
+  "child_exit_code": 0,
+  "guard_exit_code": 0,
+  "shell_exit_code": 0,
+  "stderr_bytes": 0,
+  "external_wall_seconds": 0.125,
+  "peak_child_working_set_bytes": 13705216,
+  "peak_process_commit_bytes": 8409088,
+  "peak_job_commit_bytes": 9670656,
+  "start_available_bytes": 562466816,
+  "minimum_available_bytes": 552583168,
+  "limits": {
+    "single_process": true,
+    "process_job_commit_and_sampled_peak_working_set_bytes": 134217728,
+    "wall_seconds": 60,
+    "start_available_bytes": 268435456,
+    "floor_available_bytes": 134217728,
+    "floor_action": "terminate at first observed below-floor sample",
+    "sample_interval_ms": 10
+  },
+  "guard_triggered": false,
+  "attempts": 1,
+  "pre_replay_candidate_files_unchanged": 11,
+  "original_source_inputs_unchanged": 16,
+  "checker_sha256": "e2734b98d7595f93258811c5ec20621c8bc71d71ee1142e0882afd745c544900",
+  "certificate_sha256": "d9cb359fb68ca8e9c6acffed15d3bb5b326e1d0e95a4fe28da849292e386572f",
+  "stdout_sha256": "6988c99bf49d822f17c7f5a1ed48cd11f2d3de5c7637efdbbb82ae4f327f5866",
+  "output_JSON_equals_archived_certificate": true,
+  "coverage": {
+    "product_crosschecks": 1638,
+    "permutation_degree_bounds": 24,
+    "exact_identity_nodes": 21,
+    "negative_matrices": 3,
+    "shifted_P_coefficients": 10
+  },
+  "original_author_suite_executed": false,
+  "new_independent_proof_review": false
+}

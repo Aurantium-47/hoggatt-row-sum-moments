@@ -1,0 +1,15 @@
+{
+  "record_kind": "Historical execution of the original exact-arithmetic implementation",
+  "started_utc": "2026-10-13T09:04:24Z",
+  "python_version": "not recorded in the saved execution receipt",
+  "child_exit_code": 0,
+  "wall_elapsed_seconds": 0.14100000000325963,
+  "peak_process_commit_bytes": 5840896,
+  "peak_job_commit_bytes": 7122944,
+  "rss_measured": false,
+  "limits_applied_before_resume": true,
+  "process_job_commit_limit_bytes": 134217728,
+  "wall_limit_seconds": 60,
+  "relocated_stdout_entry_executed": false,
+  "certificate_sha256": "d9cb359fb68ca8e9c6acffed15d3bb5b326e1d0e95a4fe28da849292e386572f"
+}

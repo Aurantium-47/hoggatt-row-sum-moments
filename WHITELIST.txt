@@ -1,0 +1,12 @@
+MANIFEST.json
+README.md
+REFERENCES.md
+REPRODUCIBILITY.md
+RIGHTS.md
+WHITELIST.txt
+code/verify_certificate.py
+data/exact_certificate.json
+paper/proof.pdf
+paper/proof.tex
+verification/original_execution.json
+verification/packaged_execution.json

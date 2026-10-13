@@ -1,0 +1,13 @@
+# References and their roles
+
+1. **Daniel C. Fielder and Cecil O. Alford.** “On a conjecture by Hoggatt with extensions to Hoggatt sums and Hoggatt triangles.” *Fibonacci Quarterly* **27**(2) (1989), 160–168. [Publisher scan](https://www.mathstat.dal.ca/FQ/Scanned/27-2/fielder.pdf). Foundational definitions; printed p.162 explicitly relates the zero-based Hoggatt row index m to the positively indexed Baxter number B(m+1). The family and this indexing relation are established prior work.
+
+2. **Jianxi Mao and Wenle Shi.** *The analytic properties of Hoggatt triangles*. [arXiv:2607.01582v1](https://arxiv.org/abs/2607.01582v1), 2 July 2026. Definition 1.1 and equation (2.1) identify the entries; Section 6, pp.16–17 fixes the numerical row indexing and poses the Stieltjes question after equation (6.2). It is a question about numerical row sums, separate from the following polynomial log-convexity question.
+
+3. **Hanqian Fang, Candice X. T. Zhang and James J. Y. Zhao.** *Analytic properties arising from the Baxter numbers*. [arXiv:2505.05873v1](https://arxiv.org/abs/2505.05873v1), submitted 9 May 2025. Equation (1.1), p.2 defines B_n for n>=1. Section 4, p.11 explicitly states that this Baxter sequence is not Stieltjes and mentions a negative fifth-order leading Hankel minor. Its exact certificate indexing has not been aligned unambiguously with S_3(n)=B_(n+1). Journal record: *Journal of Mathematical Analysis and Applications* **561**(1) (2026), 130615, [DOI 10.1016/j.jmaa.2026.130615](https://doi.org/10.1016/j.jmaa.2026.130615). The final journal text was not checked here; no claim of an author correction is made.
+
+4. **Yi Wang and Bao-Xuan Zhu.** “Log-convex and Stieltjes moment sequences.” *Advances in Applied Mathematics* **81** (2016), 115–127. [Official author version, arXiv:1612.04114v1](https://arxiv.org/abs/1612.04114v1). Pages 2–3 use a zero-based sequence and Hankel entries a_(i+j), with the nonnegative-measure moment representation. This convention does not itself specify an omitted initial Baxter term.
+
+5. **Shane Chern and Wenle Shi.** *Strong q-log-convexity of the d-Hoggatt polynomials*. [arXiv:2609.33732v1](https://arxiv.org/abs/2609.33732v1), 27 September 2026. Theorem 1.2 establishes strong q-log-convexity. This neighboring result is not used to infer a Stieltjes representation or the numerical classification.
+
+The scalar classification is proved by the measures and explicit certificates in the manuscript. Prior non-Stieltjes assertions for Baxter numbers remain acknowledged. Neither the full classification nor its particular uniform determinant formula is presented with a certified worldwide-priority claim.

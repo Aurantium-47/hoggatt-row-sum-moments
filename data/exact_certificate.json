@@ -1,0 +1,856 @@
+{
+  "arithmetic": "Python standard-library arbitrary integers and Fraction; no floating arithmetic in certificates",
+  "product_crosschecks": 1638,
+  "product_crosscheck_domain": "0<=d<=20, 0<=n<=11, 0<=k<=n (checks accompany, do not replace the general derivation)",
+  "all_degree_bounds": [
+    {
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "degree_bound": 20
+    },
+    {
+      "permutation": [
+        0,
+        1,
+        3,
+        2
+      ],
+      "degree_bound": 20
+    },
+    {
+      "permutation": [
+        0,
+        2,
+        1,
+        3
+      ],
+      "degree_bound": 20
+    },
+    {
+      "permutation": [
+        0,
+        2,
+        3,
+        1
+      ],
+      "degree_bound": 19
+    },
+    {
+      "permutation": [
+        0,
+        3,
+        1,
+        2
+      ],
+      "degree_bound": 19
+    },
+    {
+      "permutation": [
+        0,
+        3,
+        2,
+        1
+      ],
+      "degree_bound": 18
+    },
+    {
+      "permutation": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "degree_bound": 20
+    },
+    {
+      "permutation": [
+        1,
+        0,
+        3,
+        2
+      ],
+      "degree_bound": 20
+    },
+    {
+      "permutation": [
+        1,
+        2,
+        0,
+        3
+      ],
+      "degree_bound": 19
+    },
+    {
+      "permutation": [
+        1,
+        2,
+        3,
+        0
+      ],
+      "degree_bound": 18
+    },
+    {
+      "permutation": [
+        1,
+        3,
+        0,
+        2
+      ],
+      "degree_bound": 18
+    },
+    {
+      "permutation": [
+        1,
+        3,
+        2,
+        0
+      ],
+      "degree_bound": 17
+    },
+    {
+      "permutation": [
+        2,
+        0,
+        1,
+        3
+      ],
+      "degree_bound": 19
+    },
+    {
+      "permutation": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "degree_bound": 18
+    },
+    {
+      "permutation": [
+        2,
+        1,
+        0,
+        3
+      ],
+      "degree_bound": 18
+    },
+    {
+      "permutation": [
+        2,
+        1,
+        3,
+        0
+      ],
+      "degree_bound": 17
+    },
+    {
+      "permutation": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "degree_bound": 16
+    },
+    {
+      "permutation": [
+        2,
+        3,
+        1,
+        0
+      ],
+      "degree_bound": 16
+    },
+    {
+      "permutation": [
+        3,
+        0,
+        1,
+        2
+      ],
+      "degree_bound": 18
+    },
+    {
+      "permutation": [
+        3,
+        0,
+        2,
+        1
+      ],
+      "degree_bound": 17
+    },
+    {
+      "permutation": [
+        3,
+        1,
+        0,
+        2
+      ],
+      "degree_bound": 17
+    },
+    {
+      "permutation": [
+        3,
+        1,
+        2,
+        0
+      ],
+      "degree_bound": 16
+    },
+    {
+      "permutation": [
+        3,
+        2,
+        0,
+        1
+      ],
+      "degree_bound": 16
+    },
+    {
+      "permutation": [
+        3,
+        2,
+        1,
+        0
+      ],
+      "degree_bound": 16
+    }
+  ],
+  "P_coefficients_ascending": [
+    -1080,
+    -10068,
+    -3490,
+    -1235,
+    -5602,
+    -2605,
+    -214,
+    83,
+    18,
+    1
+  ],
+  "P_t_plus_5_coefficients_ascending": [
+    190080,
+    8752032,
+    10009560,
+    4978600,
+    1393398,
+    239300,
+    25791,
+    1703,
+    63,
+    1
+  ],
+  "identity_nodes": [
+    {
+      "d": 0,
+      "rows_n0_to_n7": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "det_permutation": 0,
+      "det_elimination": "0",
+      "factored_value": "0",
+      "equal": true
+    },
+    {
+      "d": 1,
+      "rows_n0_to_n7": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32,
+        64,
+        128
+      ],
+      "det_permutation": 0,
+      "det_elimination": "0",
+      "factored_value": "0",
+      "equal": true
+    },
+    {
+      "d": 2,
+      "rows_n0_to_n7": [
+        1,
+        2,
+        5,
+        14,
+        42,
+        132,
+        429,
+        1430
+      ],
+      "det_permutation": 5,
+      "det_elimination": "5",
+      "factored_value": "5",
+      "equal": true
+    },
+    {
+      "d": 3,
+      "rows_n0_to_n7": [
+        1,
+        2,
+        6,
+        22,
+        92,
+        422,
+        2074,
+        10754
+      ],
+      "det_permutation": 2832,
+      "det_elimination": "2832",
+      "factored_value": "2832",
+      "equal": true
+    },
+    {
+      "d": 4,
+      "rows_n0_to_n7": [
+        1,
+        2,
+        7,
+        32,
+        177,
+        1122,
+        7898,
+        60398
+      ],
+      "det_permutation": 163385,
+      "det_elimination": "163385",
+      "factored_value": "163385",
+      "equal": true
+    },
+    {
+      "d": 5,
+      "rows_n0_to_n7": [
+        1,
+        2,
+        8,
+        44,
+        310,
+        2606,
+        25202,
+        272582
+      ],
+      "det_permutation": -154000,
+      "det_elimination": "-154000",
+      "factored_value": "-154000",
+      "equal": true
+    },
+    {
+      "d": 6,
+      "rows_n0_to_n7": [
+        1,
+        2,
+        9,
+        58,
+        506,
+        5462,
+        70226,
+        1038578
+      ],
+      "det_permutation": -152388040,
+      "det_elimination": "-152388040",
+      "factored_value": "-152388040",
+      "equal": true
+    },
+    {
+      "d": 7,
+      "rows_n0_to_n7": [
+        1,
+        2,
+        10,
+        74,
+        782,
+        10562,
+        175826,
+        3457742
+      ],
+      "det_permutation": -4142474112,
+      "det_elimination": "-4142474112",
+      "factored_value": "-4142474112",
+      "equal": true
+    },
+    {
+      "d": 8,
+      "rows_n0_to_n7": [
+        1,
+        2,
+        11,
+        92,
+        1157,
+        19142,
+        403691,
+        10312304
+      ],
+      "det_permutation": -61044214896,
+      "det_elimination": "-61044214896",
+      "factored_value": "-61044214896",
+      "equal": true
+    },
+    {
+      "d": 9,
+      "rows_n0_to_n7": [
+        1,
+        2,
+        12,
+        112,
+        1652,
+        32892,
+        862864,
+        28066040
+      ],
+      "det_permutation": -620565390720,
+      "det_elimination": "-620565390720",
+      "factored_value": "-620565390720",
+      "equal": true
+    },
+    {
+      "d": 10,
+      "rows_n0_to_n7": [
+        1,
+        2,
+        13,
+        134,
+        2290,
+        54056,
+        1736737,
+        70702634
+      ],
+      "det_permutation": -4831832968875,
+      "det_elimination": "-4831832968875",
+      "factored_value": "-4831832968875",
+      "equal": true
+    },
+    {
+      "d": 11,
+      "rows_n0_to_n7": [
+        1,
+        2,
+        14,
+        158,
+        3096,
+        85542,
+        3321138,
+        166704722
+      ],
+      "det_permutation": -30625082179120,
+      "det_elimination": "-30625082179120",
+      "factored_value": "-30625082179120",
+      "equal": true
+    },
+    {
+      "d": 12,
+      "rows_n0_to_n7": [
+        1,
+        2,
+        15,
+        184,
+        4097,
+        131042,
+        6076618,
+        371168618
+      ],
+      "det_permutation": -164521620189927,
+      "det_elimination": "-164521620189927",
+      "factored_value": "-164521620189927",
+      "equal": true
+    },
+    {
+      "d": 13,
+      "rows_n0_to_n7": [
+        1,
+        2,
+        16,
+        212,
+        5322,
+        195162,
+        10698578,
+        786014042
+      ],
+      "det_permutation": -770983662611344,
+      "det_elimination": "-770983662611344",
+      "factored_value": "-770983662611344",
+      "equal": true
+    },
+    {
+      "d": 14,
+      "rows_n0_to_n7": [
+        1,
+        2,
+        17,
+        242,
+        6802,
+        283562,
+        18209450,
+        1592555378
+      ],
+      "det_permutation": -3220116854652880,
+      "det_elimination": "-3220116854652880",
+      "factored_value": "-3220116854652880",
+      "equal": true
+    },
+    {
+      "d": 15,
+      "rows_n0_to_n7": [
+        1,
+        2,
+        18,
+        274,
+        8570,
+        403106,
+        30077762,
+        3102435674
+      ],
+      "det_permutation": -12187081083520000,
+      "det_elimination": "-12187081083520000",
+      "factored_value": "-12187081083520000",
+      "equal": true
+    },
+    {
+      "d": 16,
+      "rows_n0_to_n7": [
+        1,
+        2,
+        19,
+        308,
+        10661,
+        562022,
+        48369575,
+        5835184280
+      ],
+      "det_permutation": -42347156578932480,
+      "det_elimination": "-42347156578932480",
+      "factored_value": "-42347156578932480",
+      "equal": true
+    },
+    {
+      "d": 17,
+      "rows_n0_to_n7": [
+        1,
+        2,
+        20,
+        344,
+        13112,
+        770072,
+        75938480,
+        10633555088
+      ],
+      "det_permutation": -136534413420057600,
+      "det_elimination": "-136534413420057600",
+      "factored_value": "-136534413420057600",
+      "equal": true
+    },
+    {
+      "d": 18,
+      "rows_n0_to_n7": [
+        1,
+        2,
+        21,
+        382,
+        15962,
+        1038732,
+        116661085,
+        18831460958
+      ],
+      "det_permutation": -412026373330899147,
+      "det_elimination": "-412026373330899147",
+      "factored_value": "-412026373330899147",
+      "equal": true
+    },
+    {
+      "d": 19,
+      "rows_n0_to_n7": [
+        1,
+        2,
+        22,
+        422,
+        19252,
+        1381382,
+        175725706,
+        32493882962
+      ],
+      "det_permutation": -1172223396095416560,
+      "det_elimination": "-1172223396095416560",
+      "factored_value": "-1172223396095416560",
+      "equal": true
+    },
+    {
+      "d": 20,
+      "rows_n0_to_n7": [
+        1,
+        2,
+        23,
+        464,
+        23025,
+        1813506,
+        259982802,
+        54753759062
+      ],
+      "det_permutation": -3163289873712112375,
+      "det_elimination": "-3163289873712112375",
+      "factored_value": "-3163289873712112375",
+      "equal": true
+    }
+  ],
+  "negative_witnesses": [
+    {
+      "d": 3,
+      "order": 6,
+      "shift": 1,
+      "rows": [
+        1,
+        2,
+        6,
+        22,
+        92,
+        422,
+        2074,
+        10754,
+        58202,
+        326240,
+        1882960,
+        11140560
+      ],
+      "matrix": [
+        [
+          2,
+          6,
+          22,
+          92,
+          422,
+          2074
+        ],
+        [
+          6,
+          22,
+          92,
+          422,
+          2074,
+          10754
+        ],
+        [
+          22,
+          92,
+          422,
+          2074,
+          10754,
+          58202
+        ],
+        [
+          92,
+          422,
+          2074,
+          10754,
+          58202,
+          326240
+        ],
+        [
+          422,
+          2074,
+          10754,
+          58202,
+          326240,
+          1882960
+        ],
+        [
+          2074,
+          10754,
+          58202,
+          326240,
+          1882960,
+          11140560
+        ]
+      ],
+      "determinant": -115894592,
+      "second_determinant": "-115894592"
+    },
+    {
+      "d": 4,
+      "order": 5,
+      "shift": 1,
+      "rows": [
+        1,
+        2,
+        7,
+        32,
+        177,
+        1122,
+        7898,
+        60398,
+        494078,
+        4274228
+      ],
+      "matrix": [
+        [
+          2,
+          7,
+          32,
+          177,
+          1122
+        ],
+        [
+          7,
+          32,
+          177,
+          1122,
+          7898
+        ],
+        [
+          32,
+          177,
+          1122,
+          7898,
+          60398
+        ],
+        [
+          177,
+          1122,
+          7898,
+          60398,
+          494078
+        ],
+        [
+          1122,
+          7898,
+          60398,
+          494078,
+          4274228
+        ]
+      ],
+      "determinant": -2220868988,
+      "second_determinant": "-2220868988"
+    },
+    {
+      "d": 5,
+      "order": 4,
+      "shift": 1,
+      "rows": [
+        1,
+        2,
+        8,
+        44,
+        310,
+        2606,
+        25202,
+        272582
+      ],
+      "matrix": [
+        [
+          2,
+          8,
+          44,
+          310
+        ],
+        [
+          8,
+          44,
+          310,
+          2606
+        ],
+        [
+          44,
+          310,
+          2606,
+          25202
+        ],
+        [
+          310,
+          2606,
+          25202,
+          272582
+        ]
+      ],
+      "determinant": -154000,
+      "second_determinant": "-154000"
+    }
+  ],
+  "quadratic_form": {
+    "vector": [
+      -17017,
+      11284,
+      -1877,
+      85
+    ],
+    "matrix_times_vector": [
+      0,
+      0,
+      0,
+      -3850
+    ],
+    "value": -327250
+  },
+  "positive_case_spotchecks": [
+    {
+      "n": 0,
+      "S1": 1,
+      "S2": 1
+    },
+    {
+      "n": 1,
+      "S1": 2,
+      "S2": 2
+    },
+    {
+      "n": 2,
+      "S1": 4,
+      "S2": 5
+    },
+    {
+      "n": 3,
+      "S1": 8,
+      "S2": 14
+    },
+    {
+      "n": 4,
+      "S1": 16,
+      "S2": 42
+    },
+    {
+      "n": 5,
+      "S1": 32,
+      "S2": 132
+    },
+    {
+      "n": 6,
+      "S1": 64,
+      "S2": 429
+    },
+    {
+      "n": 7,
+      "S1": 128,
+      "S2": 1430
+    },
+    {
+      "n": 8,
+      "S1": 256,
+      "S2": 4862
+    },
+    {
+      "n": 9,
+      "S1": 512,
+      "S2": 16796
+    },
+    {
+      "n": 10,
+      "S1": 1024,
+      "S2": 58786
+    },
+    {
+      "n": 11,
+      "S1": 2048,
+      "S2": 208012
+    }
+  ],
+  "status": "PASS"
+}

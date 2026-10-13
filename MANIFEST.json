@@ -1,0 +1,63 @@
+{
+  "title": "Stieltjes moment classification of numerical Hoggatt row sums",
+  "version": "0.1.0",
+  "hash_algorithm": "SHA-256",
+  "self_excluded": true,
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 2347,
+      "sha256": "7085d8c60a4132cc10ae073e646c593b96252611880c76ddf1a03852607ad654"
+    },
+    {
+      "path": "REFERENCES.md",
+      "bytes": 2686,
+      "sha256": "9117d6d5ed0b66bd660261adf41075958211884f41661a8cddfab0117f099817"
+    },
+    {
+      "path": "REPRODUCIBILITY.md",
+      "bytes": 4232,
+      "sha256": "b039e0f24b5631a1e5db03cd5bdb3165b81535b1a3a7bc15dedfe671f4a36fc2"
+    },
+    {
+      "path": "RIGHTS.md",
+      "bytes": 960,
+      "sha256": "8059fb2a14b51435c0a19e943ba683dd065bcda91b68955e2f5c82eeb7b7c078"
+    },
+    {
+      "path": "WHITELIST.txt",
+      "bytes": 254,
+      "sha256": "a2dce58f673d66bd30338cd3687b8d93ec365fa7f2fd6838dd53c142ea056f46"
+    },
+    {
+      "path": "code/verify_certificate.py",
+      "bytes": 4390,
+      "sha256": "e2734b98d7595f93258811c5ec20621c8bc71d71ee1142e0882afd745c544900"
+    },
+    {
+      "path": "data/exact_certificate.json",
+      "bytes": 14153,
+      "sha256": "d9cb359fb68ca8e9c6acffed15d3bb5b326e1d0e95a4fe28da849292e386572f"
+    },
+    {
+      "path": "paper/proof.pdf",
+      "bytes": 440384,
+      "sha256": "02b246e3fe36945fd28f43481aaf4f57334234f0db2a562ca419fa1523db23ab"
+    },
+    {
+      "path": "paper/proof.tex",
+      "bytes": 16436,
+      "sha256": "8b9e9d34b1b8db8fe5240406485506250fed741d601be44427f7b45a4938a9f2"
+    },
+    {
+      "path": "verification/original_execution.json",
+      "bytes": 638,
+      "sha256": "ceefbf3f40b1f80d2422f9cbe9c853dc835bfc8ad7ae8f2070e6710f91039db7"
+    },
+    {
+      "path": "verification/packaged_execution.json",
+      "bytes": 1736,
+      "sha256": "ecbe843521a8a9518b3e721fe66e77ea1b0f2101c5dc556646b13650a3c21366"
+    }
+  ]
+}

@@ -1,0 +1,421 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=25mm]{geometry}
+\PassOptionsToPackage{hyphens}{url}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={Stieltjes moment classification of numerical Hoggatt row sums},pdfauthor={Aurantium}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\title{Stieltjes moment classification\protect\\ of numerical Hoggatt row sums}
+\author{Aurantium}
+\date{14 October 2026}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+For each positive integer $d$, we consider the numerical row sums of the
+$d$-Hoggatt triangle, indexed from zero. We give a complete classification:
+these row sums form a Stieltjes moment sequence exactly for $d=1,2$.
+The positive cases have explicit measures. For $d=3,4$ we give finite
+negative shifted-Hankel determinants. For every $d\geq5$, one degree-20
+determinant identity provides an obstruction; the identity is certified
+by a degree bound and 21 exact evaluations. The proof and the exact
+finite certificates are supplied in full. The Baxter indexing and the
+scope of earlier nonmoment assertions are stated separately.
+\end{abstract}
+
+\section{Definitions and statement}
+
+For integers $d\geq1$, $n\geq0$ and $0\leq k\leq n$, define
+\begin{equation}\label{eq:H}
+ H_d(n,k)=\prod_{j=0}^{d-1}
+       \frac{\binom{n+j}{k}}{\binom{k+j}{k}},
+ \qquad S_d(n)=\sum_{k=0}^{n}H_d(n,k).
+\end{equation}
+Set $H_d(n,k)=0$ for integers $k<0$ or $k>n$.
+All products in \eqref{eq:H} have positive denominators.
+This is the usual normalization of the Hoggatt triangle; its entries
+also equal the consecutive Pascal minors
+$\det[\binom{n+i}{k+j}]_{i,j=0}^{d-1}$
+\cite[Definition 1.1 and (2.1)]{MS}. The product in \eqref{eq:H}
+is the definition used in every calculation below. In particular,
+$S_d(0)=1$.
+
+A sequence $(s_n)_{n\geq0}$ is a \emph{Stieltjes moment sequence}
+if there is a nonnegative Borel measure $\mu$ on $[0,\infty)$ such that
+\begin{equation}\label{eq:moment}
+ s_n=\int_{[0,\infty)}x^n\,d\mu(x)<\infty
+ \qquad(n\geq0).
+\end{equation}
+The zero-indexed convention is essential; the total mass is $s_0$.
+
+\begin{theorem}\label{thm:classification}
+For every integer $d\geq1$, the sequence $(S_d(n))_{n\geq0}$ is
+a Stieltjes moment sequence if and only if $d=1$ or $d=2$.
+\end{theorem}
+
+The theorem concerns numerical row sums, not a coefficientwise
+moment property of row polynomials. Mao and Shi pose this numerical
+question after their equation (6.2) \cite[Section 6]{MS}.
+The following proof uses \eqref{eq:H}, explicit measures and exact
+finite certificates. It does not use a conjectured positivity property.
+
+\section{A necessary condition and the positive cases}
+
+For $m\geq1$, put
+\begin{equation}\label{eq:shifted-Hankel}
+ M_m^{(d)}=[S_d(i+j+1)]_{i,j=0}^{m-1}.
+\end{equation}
+If \eqref{eq:moment} holds for $S_d$, then for every real vector
+$v=(v_0,\ldots,v_{m-1})^{\mathsf T}$,
+\begin{equation}\label{eq:Gram}
+ v^{\mathsf T}M_m^{(d)}v
+ =\int_{[0,\infty)}x
+       \left(\sum_{i=0}^{m-1}v_i x^i\right)^2d\mu(x)\geq0.
+\end{equation}
+Only finite sums are expanded. The moments up to degree $2m-1$
+are finite, so each expanded term is absolutely integrable.
+Thus $M_m^{(d)}$ is real symmetric positive semidefinite, and
+\begin{equation}\label{eq:necessary-det}
+ \det M_m^{(d)}\geq0.
+\end{equation}
+A negative determinant suffices to rule out a Stieltjes representation;
+no converse to this necessary condition is needed.
+
+For $d=1$, equation \eqref{eq:H} gives $H_1(n,k)=\binom nk$, hence
+$S_1(n)=2^n$. The unit point mass $\delta_2$ represents these moments.
+
+For $d=2$, factorial cancellation gives
+\[
+ H_2(n,k)=\frac{1}{k+1}\binom nk\binom{n+1}{k}
+ =\frac{1}{n+1}\binom{n+1}{k+1}\binom{n+1}{k}.
+\]
+By the finite Vandermonde convolution,
+\begin{equation}\label{eq:Catalan-shift}
+ S_2(n)=\frac{1}{n+1}\binom{2n+2}{n}
+       =\frac{1}{n+2}\binom{2n+2}{n+1}=C_{n+1}.
+\end{equation}
+Here $C_j=(j+1)^{-1}\binom{2j}{j}$ denotes the Catalan number.
+Define the measure
+\begin{equation}\label{eq:positive-measure}
+ d\mu_2(x)=\frac{\sqrt{x(4-x)}}{2\pi}
+               \mathbf1_{(0,4)}(x)\,dx.
+\end{equation}
+Its endpoint singularity exponents are both $1/2$, so it is finite;
+its compact support makes every moment finite. With $x=4u$,
+\begin{align}
+ \int x^n\,d\mu_2(x)
+ &=\frac{4^{n+2}}{2\pi}
+          B\!\left(n+\frac32,\frac32\right)\notag\\
+ &=\frac{(2n+2)!}{(n+1)!(n+2)!}=C_{n+1}.\label{eq:beta}
+\end{align}
+The beta arguments are positive. The second equality follows from
+$B(a,b)=\Gamma(a)\Gamma(b)/\Gamma(a+b)$,
+$\Gamma(3/2)=\sqrt\pi/2$ and
+$\Gamma(n+3/2)=(2n+2)!\sqrt\pi/(4^{n+1}(n+1)!)$.
+At $n=0$, the value is $1$, as required. This is the shifted Catalan
+measure, with the factor $x$ relative to the usual Catalan density.
+
+\section{Polynomial dependence on the parameter}
+
+\begin{lemma}\label{lem:rectangle}
+For nonnegative integers $d,n,k$ with $0\leq k\leq n$,
+\begin{equation}\label{eq:rectangle}
+ \prod_{r=0}^{d-1}\frac{\binom{n+r}{k}}{\binom{k+r}{k}}
+ =\prod_{i=1}^{k}\prod_{j=1}^{n-k}
+                    \frac{d+i+j-1}{i+j-1}.
+\end{equation}
+The left side at $d=0$ is an empty product. Empty rectangular
+products at $k=0$ or $k=n$ also equal $1$.
+\end{lemma}
+
+\begin{proof}
+Write $a=k$, $b=n-k$ and denote the two sides by $F_d$ and $G_d$.
+Factorial cancellation gives
+\[
+ F_d=\prod_{r=0}^{d-1}\frac{(a+b+r)!r!}{(a+r)!(b+r)!}.
+\]
+Both $F_0$ and $G_0$ are $1$. For $d\geq0$,
+\begin{align}
+ \frac{F_{d+1}}{F_d}
+ &=\frac{(a+b+d)!d!}{(a+d)!(b+d)!}
+  =\prod_{i=1}^{a}\frac{d+i+b}{d+i}\notag\\
+ &=\prod_{i=1}^{a}\prod_{j=1}^{b}
+                    \frac{d+i+j}{d+i+j-1}
+  =\frac{G_{d+1}}{G_d}.\label{eq:bridge-ratio}
+\end{align}
+The inner product telescopes, and every denominator is positive.
+The equalities also hold when $a=0$ or $b=0$. Induction in $d$
+proves \eqref{eq:rectangle}.
+\end{proof}
+
+For an indeterminate $z$, use the right side of \eqref{eq:rectangle}
+to define $H_z(n,k)\in\Q[z]$. Its degree is $k(n-k)$, with
+positive leading coefficient, including degree zero at an empty
+rectangle. Therefore
+\begin{equation}\label{eq:row-degree}
+ \deg S_z(n)\leq\left\lfloor\frac{n^2}{4}\right\rfloor.
+\end{equation}
+The value $d=0$ is used only for this polynomial extension and its
+certificate; it is not included in Theorem~\ref{thm:classification}.
+
+Let
+\begin{equation}\label{eq:D4}
+ D_4(z)=\det[S_z(i+j+1)]_{i,j=0}^{3}.
+\end{equation}
+The entrywise degree bounds from \eqref{eq:row-degree} form the matrix
+\begin{equation}\label{eq:degree-matrix}
+ \begin{pmatrix}
+ 0&1&2&4\\1&2&4&6\\2&4&6&9\\4&6&9&12
+ \end{pmatrix}.
+\end{equation}
+In the Leibniz expansion, the term indexed by $\pi\in\mathfrak S_4$
+has degree at most
+\[
+ w(\pi)=\sum_{i=0}^{3}
+           \left\lfloor\frac{(i+\pi(i)+1)^2}{4}\right\rfloor.
+\]
+All 24 bounds are listed in Appendix~\ref{app:degrees}; their maximum
+is $20$. Thus $\deg D_4\leq20$, regardless of possible cancellation.
+
+\section{The negative certificates}
+
+\subsection{Parameters three and four}
+
+The needed moment prefixes, evaluated by the finite product
+\eqref{eq:H}, are shown below. A dash means that the value is not
+needed for the displayed obstruction.
+\begin{center}\small
+\begin{tabular}{r|r|r}
+$n$&$S_3(n)$&$S_4(n)$\\\hline
+0&1&1\\
+1&2&2\\
+2&6&7\\
+3&22&32\\
+4&92&177\\
+5&422&1122\\
+6&2074&7898\\
+7&10754&60398\\
+8&58202&494078\\
+9&326240&4274228\\
+10&1882960&--\\
+11&11140560&--
+\end{tabular}
+\end{center}
+With the indexing of \eqref{eq:shifted-Hankel}, these prefixes give
+\begin{equation}\label{eq:small-negative}
+ \det M_6^{(3)}=-115894592,
+ \qquad \det M_5^{(4)}=-2220868988.
+\end{equation}
+Each matrix is specified completely by the table and
+\eqref{eq:shifted-Hankel}. The exact certificate also stores both
+matrices and their evaluations by the signed-permutation formula
+and rational Gaussian elimination. Their negativity contradicts
+\eqref{eq:necessary-det} for $d=3,4$.
+
+\subsection{One identity for every parameter at least five}
+
+Define
+\begin{align}
+ P(z)={}&z^9+18z^8+83z^7-214z^6-2605z^5-5602z^4\notag\\
+       &-1235z^3-3490z^2-10068z-1080,\label{eq:P}\\
+ Q(z)={}&-\frac{z^4(z-1)^3(z+1)^3(z+2)P(z)}{74649600}.
+                                                    \label{eq:Q}
+\end{align}
+The polynomial $Q$ has degree $4+3+3+1+9=20$.
+The following exact evaluation certificate records the common value
+of $D_4(d)$ and $Q(d)$ at each of the 21 distinct nodes $d=0,\ldots,20$.
+\begin{center}\small
+\begin{tabular}{r|r@{\qquad}r|r}
+$d$&$D_4(d)=Q(d)$&$d$&$D_4(d)=Q(d)$\\\hline
+0&0&11&-30625082179120\\
+1&0&12&-164521620189927\\
+2&5&13&-770983662611344\\
+3&2832&14&-3220116854652880\\
+4&163385&15&-12187081083520000\\
+5&-154000&16&-42347156578932480\\
+6&-152388040&17&-136534413420057600\\
+7&-4142474112&18&-412026373330899147\\
+8&-61044214896&19&-1172223396095416560\\
+9&-620565390720&20&-3163289873712112375\\
+10&-4831832968875&&
+\end{tabular}
+\end{center}
+At each node, the exact data contain the eight row sums from index
+$0$ through $7$, the two determinant evaluations, and $Q(d)$.
+The supplied Python program reproduces them from \eqref{eq:H}.
+Since $D_4-Q$ has degree at most $20$ and has these 21 distinct zeros,
+\begin{equation}\label{eq:identity}
+ D_4(z)=Q(z)\qquad\hbox{in }\Q[z].
+\end{equation}
+This is a polynomial identity certificate, not extrapolation of a
+finite collection of signs. No parameter-dependent factor is divided
+out at the nodes $0$ or $1$.
+
+The exact binomial expansion at $z=t+5$ is
+\begin{align}
+ P(t+5)={}&t^9+63t^8+1703t^7+25791t^6+239300t^5\notag\\
+ &+1393398t^4+4978600t^3+10009560t^2\notag\\
+ &+8752032t+190080.\label{eq:positive-shift}
+\end{align}
+Every coefficient is positive, including the constant term.
+Thus $P(d)>0$ whenever $d\geq5$. For such $d$, all remaining
+factors of $-Q(d)$ in \eqref{eq:Q} are positive. Consequently
+\begin{equation}\label{eq:all-negative}
+ \det M_4^{(d)}=D_4(d)<0\qquad(d\in\Z,\ d\geq5).
+\end{equation}
+
+For a concrete member of this uniform obstruction,
+\[
+ M_4^{(5)}=\begin{pmatrix}
+ 2&8&44&310\\
+ 8&44&310&2606\\
+ 44&310&2606&25202\\
+ 310&2606&25202&272582
+ \end{pmatrix},\qquad \det M_4^{(5)}=-154000.
+\]
+The redundant integer-vector certificate
+\begin{equation}\label{eq:quadratic}
+ \begin{aligned}
+ v&=(-17017,11284,-1877,85)^{\mathsf T},\\
+ M_4^{(5)}v&=(0,0,0,-3850)^{\mathsf T},\\
+ v^{\mathsf T}M_4^{(5)}v&=-327250
+ \end{aligned}
+\end{equation}
+gives the same obstruction directly through \eqref{eq:Gram}.
+
+The measures for $d=1,2$, the two determinants in
+\eqref{eq:small-negative}, and \eqref{eq:all-negative} cover every
+integer $d\geq1$. This proves Theorem~\ref{thm:classification}.
+
+\section{Baxter indexing and relation to earlier work}
+
+Let $\beta_n$, $n\geq1$, denote the Baxter numbers in equation (1.1)
+of Fang, Zhang and Zhao \cite{FZZ}, with first terms
+$\beta_1=1,\beta_2=2,\beta_3=6,\beta_4=22$.
+Their summand satisfies
+\[
+ D_{n+1,k+1}
+ =\frac{2n!(n+1)!(n+2)!}
+ {k!(k+1)!(k+2)!(n-k)!(n+1-k)!(n+2-k)!}
+ =H_3(n,k).
+\]
+Hence the present convention is $S_3(n)=\beta_{n+1}$.
+The shift was already made explicit by Fielder and Alford
+\cite[p.~162]{FA}. Mao and Shi instead write $B_n=S_3(n)$ and
+specify $B_0=1,B_1=2$ \cite[pp.~16--17]{MS}.
+
+Fang, Zhang and Zhao explicitly state that their positively indexed
+Baxter sequence is not Stieltjes, immediately after Conjecture 4.2
+of their preprint \cite[p.~11]{FZZ}. This prior assertion must be
+distinguished from their accompanying reference to a negative
+fifth-order leading Hankel minor: its precise starting index and
+alignment with the zero-indexed sequence here have not been
+unambiguously established. Their final journal text has not been
+checked here, and no correction by those authors is asserted.
+We give the explicit normalized matrices above without claiming
+first discovery of Baxter non-Stieltjesness.
+
+This distinction matters because if $(a_n)_{n\geq0}$ has measure
+$\mu$, its forward shift has measure $x\,d\mu$; non-Stieltjesness
+does not propagate forward by that implication. A negative certificate
+for a sequence with an additionally chosen initial term cannot simply
+be transferred after that term is deleted. For general definitions
+of moment sequences and their Hankel matrices, see \cite{WZ}.
+
+The strong coefficientwise $q$-log-convexity result of Chern and Shi
+\cite[Theorem 1.2]{CS} concerns a different positivity property and
+does not supply a Stieltjes representation for these numerical
+row sums. The literature priority of the full classification and
+of the particular uniform determinant formula is not certified here.
+
+\section{Exact data and reproduction}
+
+The file \texttt{data/exact\_certificate.json} contains the 24
+permutation degree bounds, the 21 evaluation records, all three
+negative matrices, the vector certificate, and the ten coefficients
+of \eqref{eq:positive-shift}. Its arithmetic is integer and rational;
+no floating-point determinant or numerical sign threshold is used.
+The program \texttt{code/verify\_certificate.py} reconstructs the
+finite values from \eqref{eq:H}, cross-checks the rectangular product,
+and compares the signed-permutation determinant with rational
+Gaussian elimination. The argument establishing \eqref{eq:identity}
+also requires the degree proof above, and the positive cases require
+their measure calculation; finite tests alone do not replace either.
+
+The saved certificate comes from an earlier successful execution of
+the underlying arithmetic. The stdout-only packaged entry also completed one local replay with
+Python 3.12.10 on 14 October 2026. All checks passed, its JSON output
+matched the archived certificate, and child, guard and shell exited
+zero with empty stderr. No original
+author full suite is claimed to have been rerun. The precise historical
+record and the minimal command are described in
+\texttt{REPRODUCIBILITY.md}.
+
+\paragraph{Acknowledgement.}
+This note was prepared with AI assistance.
+
+\appendix
+\section{Complete degree-bound certificate}\label{app:degrees}
+The following table lists every permutation of $\{0,1,2,3\}$ and
+the bound $w(\pi)$ used with \eqref{eq:degree-matrix}.
+\begin{center}\small
+\begin{tabular}{c|r@{\qquad}c|r}
+$\pi$&$w(\pi)$&$\pi$&$w(\pi)$\\\hline
+$(0,1,2,3)$&20&$(2,0,1,3)$&19\\
+$(0,1,3,2)$&20&$(2,0,3,1)$&18\\
+$(0,2,1,3)$&20&$(2,1,0,3)$&18\\
+$(0,2,3,1)$&19&$(2,1,3,0)$&17\\
+$(0,3,1,2)$&19&$(2,3,0,1)$&16\\
+$(0,3,2,1)$&18&$(2,3,1,0)$&16\\
+$(1,0,2,3)$&20&$(3,0,1,2)$&18\\
+$(1,0,3,2)$&20&$(3,0,2,1)$&17\\
+$(1,2,0,3)$&19&$(3,1,0,2)$&17\\
+$(1,2,3,0)$&18&$(3,1,2,0)$&16\\
+$(1,3,0,2)$&18&$(3,2,0,1)$&16\\
+$(1,3,2,0)$&17&$(3,2,1,0)$&16
+\end{tabular}
+\end{center}
+
+\begin{thebibliography}{9}\footnotesize
+\setlength{\itemsep}{2pt}
+\raggedright
+\bibitem{FA}
+D.~C.~Fielder and C.~O.~Alford,
+On a conjecture by Hoggatt with extensions to Hoggatt sums and
+Hoggatt triangles, \emph{Fibonacci Quart.} \textbf{27}(2)
+(1989), 160--168.
+\url{https://www.mathstat.dal.ca/FQ/Scanned/27-2/fielder.pdf}.
+
+\bibitem{MS}
+J.~Mao and W.~Shi, \emph{The analytic properties of Hoggatt triangles},
+arXiv:2607.01582v1, 2 July 2026. Definition 1.1, (2.1), and Section 6.
+\url{https://arxiv.org/abs/2607.01582v1}.
+
+\bibitem{FZZ}
+H.~Fang, C.~X.~T.~Zhang and J.~J.~Y.~Zhao,
+\emph{Analytic properties arising from the Baxter numbers},
+arXiv:2505.05873v1, submitted 9 May 2025, Section 4, p.~11.
+\url{https://arxiv.org/abs/2505.05873v1}.
+Journal record: \emph{J. Math. Anal. Appl.} \textbf{561}(1)
+(2026), 130615, \url{https://doi.org/10.1016/j.jmaa.2026.130615}.
+The discussion here is tied to the specified preprint; the final
+journal text has not been checked.
+
+\bibitem{WZ}
+Y.~Wang and B.-X.~Zhu, Log-convex and Stieltjes moment sequences,
+\emph{Adv. in Appl. Math.} \textbf{81} (2016), 115--127.
+\url{https://arxiv.org/abs/1612.04114v1}.
+
+\bibitem{CS}
+S.~Chern and W.~Shi, \emph{Strong $q$-log-convexity of the
+$d$-Hoggatt polynomials}, arXiv:2609.33732v1, 27 September 2026,
+Theorem 1.2.
+\url{https://arxiv.org/abs/2609.33732v1}.
+\end{thebibliography}
+\end{document}
